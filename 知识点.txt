@@ -31,4 +31,32 @@
     逻辑运算符 and or not
     其他运算符 ..(连接两个字符串) #(返回字符串或表长度)
 
+5.table添加操作符
+    __add	对应的运算符 '+'
+    __sub	对应的运算符 '-'
+    __mul	对应的运算符 '*'
+    __div	对应的运算符 '/'
+    __mod	对应的运算符 '%'
+    __unm	对应的运算符 '-'
+    __concat	对应的运算符 '..'
+    __eq	对应的运算符 '=='
+    __lt	对应的运算符 '<'
+    __le	对应的运算符 '<='
 
+6.协同程序
+    coroutine.create()	创建coroutine,返回coroutine,参数是一个函数当和resume配合使用的时候就唤醒函数调用
+    coroutine.resume()	重启coroutine,和create配合使用
+    coroutine.yield()	挂起coroutine,将coroutine设置为挂起状态,这个和resume配合使用能有很多有用的效果
+    coroutine.status()	查看coroutine的状态(dead,suspended,running)                        
+    coroutine.wrap（）	创建coroutine,返回一个函数,一旦你调用这个函数,就进入coroutine, 和create功能重复
+    coroutine.running()	返回正在跑的coroutine,一个coroutine就是一个线程,当使用running的时候,就是返回一个corouting的线程号
+
+7.文件读写模式
+    r	以只读方式打开文件,该文件必须存在
+    w	打开只写文件,若文件存在则文件长度清为0,即该文件内容会消失.若文件不存在则建立该文件
+    a	以附加的方式打开只写文件.若文件不存在,则会建立该文件,如果文件存在,写入的数据会被加到文件尾,即文件原先的内容会被保留(EOF符保留)
+    r+	以可读写方式打开文件,该文件必须存在
+    w+	打开可读写文件,若文件存在则文件长度清为0,即该文件内容会消失.若文件不存在则建立该文件
+    a+	与a类似,但此文件可读可写
+    b	二进制模式,如果文件是二进制文件,可以加上b
+    +	号表示对文件既可以读也可以写

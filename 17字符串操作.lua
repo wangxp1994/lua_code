@@ -1,52 +1,52 @@
 -- string.upper(argument)
 -- 字符串全部转为大写字母
-print(string.upper("hello world"))
+print(string.upper("hello world"))      --HELLO WORLD
 
 -- string.lower(argument)
 -- 字符串全部转为小写字母
-print(string.lower("CHINA"))
+print(string.lower("CHINA"))    --china
 
 -- string.gsub(mainString,findString,replaceString,num)
 -- 在字符串中替换
 -- mainString为要操作的字符串,findString为被替换的字符
 -- replaceString要替换的字符,num替换次数(可以忽略,则全部替换)
-print(string.gsub("AAAAA", "A", "B", 3))
+print(string.gsub("AAAAA", "A", "B", 3))    --BBBAA 3
 
 -- string.find (str, substr, [init, [end]])
 -- 在一个指定的目标字符串中搜索指定的内容(第三个参数为索引)
 -- 返回其具体位置.不存在则返回nil
-print(string.find("good night", "i"))
+print(string.find("good night", "i"))   --7 7
 
 -- string.reverse(arg)
 -- 字符串反转
-print(string.reverse("Lua"))
+print(string.reverse("Lua"))    --auL
 
 -- string.format(...)
 -- 返回一个类似printf的格式化字符串
-print(string.format("the value is %d", 100))
+print(string.format("the value is %d", 100))    --the value is 100
 
 -- string.char(arg) 和 string.byte(arg[,int])
 -- char将整型数字转成字符并连接,
 -- byte转换字符为整数值(可以指定某个字符,默认第一个字符)
-print(string.char(97,98,99))
-print(string.byte("abc"))
-print(string.byte("abc", 3))
+print(string.char(97,98,99))        --abc
+print(string.byte("abc"))       --97
+print(string.byte("abc", 3))    --99
 
 -- string.len(arg)
 -- 计算字符串长度
-print(string.len("aaa"))
-print(#"aaa")
+print(string.len("aaa"))    --3
+print(#"aaa")   --3
 
 -- string.rep(string, n)
 -- 返回字符串string的n个拷贝
-print(string.rep("ab", 5))
+print(string.rep("ab", 5))  --ababababab
 
 -- string.gmatch(str, pattern)
 -- 回一个迭代器函数,每一次调用这个函数,返回一个在字符串str
 -- 找到的下一个符合pattern描述的子串.如果参数pattern描述的字符
 -- 串没有找到.迭代函数返回nil
 for word in string.gmatch("hello world", "%a+") do
-    print(word)
+    print(word) --hello / world
 end
 
 -- string.match(str, pattern, init)
@@ -55,7 +55,7 @@ end
 -- 在成功配对时,函数将返回配对表达式中的所有捕获结果
 -- 如果没有设置捕获标记,则返回整个配对字符串
 -- 当没有成功的配对时,返回nil
-print(string.match("I have 2 questions for you.", "%d+ %a+"))
+print(string.match("I have 2 questions for you.", "%d+ %a+"))   --2 questions
 
 --************** 字符集合***************
 --    X:  X为不包含在特殊字符中的字符,属于一个普通字符. 代表字符X本身
