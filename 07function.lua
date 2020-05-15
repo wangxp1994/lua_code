@@ -12,7 +12,7 @@ local function testFun(num, fun)
 end
 
 testFun(5,
-    local function(num)
+    function(num)
         print("this number is " .. num)
     end
 )
